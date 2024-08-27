@@ -1,0 +1,54 @@
+.videos-wrapper {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px); /* Adjust based on the height of other elements */
+    overflow: hidden;
+  }
+  
+  .main-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 150vh;
+    height: calc(100% - 120px); Adjust to leave space for thumbnails */
+    width: 75% !important;
+    /* width: !important; Set width to 75% */
+    height: 75vh; /* Adjust this to change the percentage of the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-video {
+    /* width: 150vh;
+    height: 100%;
+    object-fit: contain; */
+
+    width: 100% !important; /* Ensure video takes up 100% of the container */
+    height: auto !important;
+    object-fit: contain;
+  }
+  
+  .thumbnails-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-x: auto;
+  }
+  
+  .thumbnail {
+    flex: 0 0 auto;
+    margin: 0 5px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .thumbnail:hover {
+    transform: scale(1.05);
+  }
